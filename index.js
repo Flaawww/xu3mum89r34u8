@@ -19,7 +19,7 @@ app.listen(port, () => {
 });
 
 
-const statusMessages = ["Watching regarde les serveur.","Watching regarde les serveur."];
+const statusMessages = ["Regarde les serveur.","Regarde les serveur."];
 
 
 let currentIndex = 0;
