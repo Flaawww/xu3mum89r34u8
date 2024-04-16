@@ -19,7 +19,7 @@ app.listen(port, () => {
 });
 
 
-const statusMessages = ["les serveur."];
+const statusMessages = ["Watching regarde les serveur.","Watching regarde les serveur."];
 
 
 let currentIndex = 0;
@@ -43,7 +43,7 @@ function updateStatusAndSendMessages() {
   const nextStatus = statusMessages[(currentIndex + 1) % statusMessages.length];
 
   client.user.setPresence({
-    activities: [{ name: currentStatus, type: ActivityType.Watching}],
+    activities: [{ name: currentStatus, type: ActivityType.Custom}],
     status: 'dnd',
   });
 
@@ -71,5 +71,3 @@ client.once('ready', () => {
 });
 
 login();
-
-
